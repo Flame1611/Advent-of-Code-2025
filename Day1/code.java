@@ -22,13 +22,15 @@ public class code{
                     System.out.println("Invalid initial character: " + direction);
                     break;
                 }
-            if (position == 0 || position == 100) {
-                position = 0;
+            while (position < 0 || position > 99) {
+                if (position < 0) {
+                    position += 100;
+                } else {
+                    position -= 100;
+                }
+            }
+            if (position == 0) {
                 password++;
-            } else if (position < 0) {
-                position += 100;
-            } else if (position > 99) {
-                position -= 100;
             }
             
         }
