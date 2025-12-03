@@ -6,7 +6,7 @@ public class code {
     public static void main(String[] args) throws IOException {
         Scanner file = new Scanner(Path.of("input.txt"));
         System.out.printf("The password is:\n%d\n", Part1(file));
-        file.close();
+        // file.close();
         file = new Scanner(Path.of("input.txt"));
         System.out.printf("The password is:\n%d\n", Part2(file));
         file.close();
