@@ -32,10 +32,7 @@ def part2(f, battery_size = 12): # Attempting to make it scalable for any batter
                 if line[number] > battery[i]:
                     battery[i] = line[number]
                     for j in range(1,battery_size-(i)):
-                        try:
-                            battery[i+j] = line[number+i+j]
-                        except:
-                            print(f"{i}, {j}, {battery}, {line}, {number}, {len(line)}")
+                        battery[i+j] = line[number+i+j]
                     break
         for ending in range(battery_size-1,0,-1):
             if battery[-ending] < line[-ending]:
@@ -47,4 +44,4 @@ def part2(f, battery_size = 12): # Attempting to make it scalable for any batter
         total += int(voltage)
     return total
 
-main() # type: ignore
+main()

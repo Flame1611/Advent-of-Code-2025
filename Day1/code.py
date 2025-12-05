@@ -27,7 +27,7 @@ def Part2(f: list[str]) -> int:
     password = 0
     position = 50
     last_position = 50
-    for line in f: # type: ignore
+    for line in f:
         direction, distance = line[0], int(line[1:])
         match direction.upper():
             case "L":

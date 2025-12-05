@@ -1,4 +1,3 @@
-# type: ignore
 def main():
     with open("input.txt","r") as f:
         print(f"Answer for Part 1:\n{part1(f)}") 
